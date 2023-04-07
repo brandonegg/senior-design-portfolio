@@ -1,3 +1,5 @@
+Reference Artical: https://www.netlify.com/blog/how-to-use-remix-framework-with-edge-functions/
+
 # Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)
