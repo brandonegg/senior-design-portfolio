@@ -3,7 +3,7 @@ interface NavLinkDetails {
     href: string,
 }
 
-const navLinks = [
+const navLinks: NavLinkDetails[] = [
     {
         label: "Home",
         href: "/",

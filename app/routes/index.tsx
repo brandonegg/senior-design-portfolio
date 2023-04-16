@@ -4,6 +4,7 @@ import uiowaLogo from '../../public/icons/uiowa-logo.jpg';
 
 import { NavBar } from '~/components/header';
 import { TeamSection } from '~/components/home/teams';
+import { ProjectSection } from '~/components/home/projects';
 
 export function headers({
   loaderHeaders,
@@ -34,6 +35,7 @@ function TitleSection() {
       backgroundSize: 'cover',
     }} className="snap-always snap-center h-full">
       <div style={{
+        WebkitBackdropFilter: `blur(15px)`,
         backdropFilter: 'blur(15px)',
       }} className="h-full w-full grid place-items-center relative">
         <div className="w-96 text-center">
@@ -54,25 +56,6 @@ function TitleSection() {
         <div className='absolute bottom-10'>
           <ArrowDownIcon className='animate-bounce text-gray-300 h-12 w-12'/>
         </div>
-      </div>
-    </section>
-  );
-}
-
-/**
- * Display project info summary for senior design
- */
-function ProjectSection() {
-  return (
-    <section style={{
-      backgroundImage: `url("/backdrops/electronics-lab.jpg")`,
-      backgroundPosition: `center`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-    }}id="projects" className="snap-center snap-always h-full">
-      <div style={{
-        backdropFilter: 'blur(15px)',
-      }} className="h-full w-full">
       </div>
     </section>
   );
