@@ -32,7 +32,7 @@ function TitleSection() {
         backdropFilter: 'blur(10px)',
       }} className="h-full w-full grid place-items-center">
         <div className="w-96 text-center">
-          <img className="mb-8 mx-auto rounded-xl w-28 drop-shadow-lg" src={uiowaLogo}></img>
+          <img alt="University of Iowa logo" className="mb-8 mx-auto rounded-xl w-28 drop-shadow-lg" src={uiowaLogo}></img>
           <div className='space-y-2'>
             <h2 className='text-yellow-300 font-bold text-4xl'>University of Iowa</h2>
             <h1 className='text-white font-bold text-8xl'>SENIOR DESIGN</h1>
