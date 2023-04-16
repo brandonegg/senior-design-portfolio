@@ -18,6 +18,9 @@ const navLinks = [
     }
 ];
 
+/**
+ * Single navlink element of the navbar
+ */
 function NavLink({details}: {details: NavLinkDetails}) {
     return (
         <li className="text-white py-2 px-10 text-xl font-semibold">
@@ -26,6 +29,9 @@ function NavLink({details}: {details: NavLinkDetails}) {
     );
 }
 
+/**
+ * Fixed navbar
+ */
 function NavBar() {
     return (
         <nav className="absolute top-5 left-0 right-0 z-50">
