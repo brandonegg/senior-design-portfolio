@@ -3,6 +3,7 @@ import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import uiowaLogo from '../../public/icons/uiowa-logo.jpg';
 
 import { NavBar } from '~/components/header';
+import { TeamSection } from '~/components/home/teams';
 
 export function headers({
   loaderHeaders,
@@ -33,7 +34,7 @@ function TitleSection() {
       backgroundSize: 'cover',
     }} className="snap-always snap-center h-full">
       <div style={{
-        backdropFilter: 'blur(10px)',
+        backdropFilter: 'blur(15px)',
       }} className="h-full w-full grid place-items-center relative">
         <div className="w-96 text-center">
           <img alt="University of Iowa logo" className="mb-8 mx-auto rounded-xl w-28 drop-shadow-lg" src={uiowaLogo}></img>
@@ -59,23 +60,20 @@ function TitleSection() {
 }
 
 /**
- * Display team introduction for senior design.
- */
-function TeamSection() {
-  return (
-    <section id="team" className="snap-center snap-always h-full bg-gradient-to-r from-indigo-500">
-
-    </section>
-  );
-}
-
-/**
  * Display project info summary for senior design
  */
 function ProjectSection() {
   return (
-    <section id="projects" className="snap-center snap-always h-full">
-
+    <section style={{
+      backgroundImage: `url("/backdrops/electronics-lab.jpg")`,
+      backgroundPosition: `center`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+    }}id="projects" className="snap-center snap-always h-full">
+      <div style={{
+        backdropFilter: 'blur(15px)',
+      }} className="h-full w-full">
+      </div>
     </section>
   );
 }
