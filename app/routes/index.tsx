@@ -4,7 +4,7 @@ import uiowaLogo from '../../public/icons/uiowa-logo.jpg';
 
 import { NavBar } from '~/components/header';
 import { ProjectSection } from '~/components/home/projects';
-import { TeamSection } from '~/components/home/teams';
+import { TeamSection } from '~/components/home/team';
 
 export function headers({
   loaderHeaders,
