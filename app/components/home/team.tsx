@@ -55,7 +55,7 @@ function MemberWidget({index, details, selected, setSelected}: {
   setSelected?: React.Dispatch<React.SetStateAction<number>>,
 }) {
   return (
-    <div className="p-4 w-full bg-white rounded-xl drop-shadow-xl border border-neutral-300 flex flex-row space-x-6">
+    <div className="p-4 w-[320px] sm:w-full bg-white rounded-xl drop-shadow-xl border border-neutral-300 flex flex-row space-x-6">
       <img alt={`${details.name} profile`} src={details.profileImg}
         className="w-24 border border-neutral-900 rounded-full"
       />
@@ -113,7 +113,7 @@ function TeamSection() {
           <h1 className='text-4xl sm:text-5xl font-extrabold'>Meet the Team</h1>
           <p className='text-gray-500 italic'>The brains behind the operation</p>
         </div>
-        <div className='relative sm:flex sm:space-x-24'>
+        <div className='relative sm:flex sm:space-x-12 lg:space-x-24'>
           {/**Left side teammates */}
           <div className="block sm:inline-block w-full sm:mx-0 sm:w-96 space-y-4 sm:space-y-8">
             {members.map((member, index) => {
@@ -124,7 +124,7 @@ function TeamSection() {
           </div>
 
           {/**Summary right */}
-          <div className="hidden sm:relative inline-block flex flex-col w-[600px]">
+          <div className="hidden relative sm:flex flex-col w-[600px]">
             <MemberSummary details={members[0]} />
           </div>
         </div>

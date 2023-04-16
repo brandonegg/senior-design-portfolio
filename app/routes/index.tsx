@@ -38,7 +38,7 @@ function TitleSection() {
         WebkitBackdropFilter: `blur(15px)`,
         backdropFilter: 'blur(15px)',
       }} className="h-full w-full grid place-items-center relative">
-        <div className="sm:w-96 text-center">
+        <div className="w-80 sm:w-96 text-center">
           <img alt="University of Iowa logo" className="mb-8 mx-auto rounded-xl w-28 drop-shadow-lg" src={uiowaLogo}></img>
           <div className='space-y-2'>
             <h2 className='text-yellow-300 font-bold text-3xl sm:text-4xl'>University of Iowa</h2>
