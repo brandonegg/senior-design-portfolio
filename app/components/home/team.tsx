@@ -108,14 +108,14 @@ function TeamSection() {
 
   return (
     <section id="team" className="relative snap-center snap-always h-full bg-gradient-to-r from-yellow-200/20 to-yellow-100/50 to-white grid place-items-center">
-      <div className='space-y-12'>
+      <div className='space-y-6 sm:space-y-12'>
         <div className='text-center'>
           <h1 className='text-4xl sm:text-5xl font-extrabold'>Meet the Team</h1>
           <p className='text-gray-500 italic'>The brains behind the operation</p>
         </div>
         <div className='relative sm:flex sm:space-x-24'>
           {/**Left side teammates */}
-          <div className="block sm:inline-block w-full sm:mx-0 sm:w-96 space-y-8">
+          <div className="block sm:inline-block w-full sm:mx-0 sm:w-96 space-y-4 sm:space-y-8">
             {members.map((member, index) => {
               return (
                 <MemberWidget index={index} key={index} details={member} selected={selected} setSelected={setSelected} />
