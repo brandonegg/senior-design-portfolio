@@ -15,12 +15,43 @@ export function headers({
   };
 }
 
+/**
+ * Main intro title
+ */
+function TitleSection() {
+  return (
+    <section className="snap-y h-full">
+
+    </section>
+  );
+}
+
+/**
+ * Display team introduction for senior design.
+ */
+function TeamSection() {
+  return (
+    <section className="snap-y h-full">
+
+    </section>
+  );
+}
+
+/**
+ * Display project info summary for senior design
+ */
+function ProjectSection() {
+  return (
+    <section className="snap-y h-full">
+
+    </section>
+  );
+}
+
 export default function Index() {
   return (
-    <main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1 className="text-3xl text-amber-400 font-bold underline">
-        Hello world!
-      </h1>
+    <main className="h-screen" style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+      <TitleSection />
     </main>
   );
 }
