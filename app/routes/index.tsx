@@ -1,4 +1,8 @@
+import { ArrowDownIcon } from '@heroicons/react/24/solid';
+
 import uiowaLogo from '../../public/icons/uiowa-logo.jpg';
+
+import { NavBar } from '~/components/header';
 
 export function headers({
   loaderHeaders,
@@ -27,10 +31,10 @@ function TitleSection() {
       backgroundPosition: `center`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-    }} className="snap-y h-full">
+    }} className="snap-always snap-center h-full">
       <div style={{
         backdropFilter: 'blur(10px)',
-      }} className="h-full w-full grid place-items-center">
+      }} className="h-full w-full grid place-items-center relative">
         <div className="w-96 text-center">
           <img alt="University of Iowa logo" className="mb-8 mx-auto rounded-xl w-28 drop-shadow-lg" src={uiowaLogo}></img>
           <div className='space-y-2'>
@@ -44,6 +48,11 @@ function TitleSection() {
           </div>
           <p className='mt-8 text-gray-100'>A project portfolio and team overview for senior design at the University of Iowa</p>
         </div>
+
+        {/** Down arrow */}
+        <div className='absolute bottom-10'>
+          <ArrowDownIcon className='animate-bounce text-gray-300 h-12 w-12'/>
+        </div>
       </div>
     </section>
   );
@@ -54,7 +63,7 @@ function TitleSection() {
  */
 function TeamSection() {
   return (
-    <section id="team" className="snap-y h-full bg-gradient-to-r from-indigo-500">
+    <section id="team" className="snap-center snap-always h-full bg-gradient-to-r from-indigo-500">
 
     </section>
   );
@@ -65,7 +74,7 @@ function TeamSection() {
  */
 function ProjectSection() {
   return (
-    <section id="projects" className="snap-y h-full">
+    <section id="projects" className="snap-center snap-always h-full">
 
     </section>
   );
@@ -73,7 +82,8 @@ function ProjectSection() {
 
 export default function Index() {
   return (
-    <main className="h-screen" style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+    <main className="overflow-y-scroll snap snap-y snap-mandatory h-screen relative" style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+      <NavBar />
       <TitleSection />
       <TeamSection />
       <ProjectSection />
