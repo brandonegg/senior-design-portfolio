@@ -1,8 +1,8 @@
+import { ArrowDownIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
 import brandonBackdrop from "../../../public/backdrops/writing-code.jpg";
 import brandonProfile from "../../../public/profiles/brandon.jpeg";
-import { ArrowDownIcon } from "@heroicons/react/24/solid";
 
 interface TeamMember {
   name: string,

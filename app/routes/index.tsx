@@ -41,13 +41,13 @@ function TitleSection() {
         <div className="w-96 text-center">
           <img alt="University of Iowa logo" className="mb-8 mx-auto rounded-xl w-28 drop-shadow-lg" src={uiowaLogo}></img>
           <div className='space-y-2'>
-            <h2 className='text-yellow-300 font-bold text-4xl'>University of Iowa</h2>
-            <h1 className='text-white font-bold text-8xl'>SENIOR DESIGN</h1>
+            <h2 className='text-yellow-300 font-bold text-3xl sm:text-4xl'>University of Iowa</h2>
+            <h1 className='text-white font-bold text-7xl sm:text-8xl'>SENIOR DESIGN</h1>
             <h2 style={{
               background: '-webkit-linear-gradient(#F8CA28, #FAC30040)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-            }} className='text-4xl font-bold'>2023</h2>
+            }} className='text-3xl sm:text-4xl font-bold'>2023</h2>
           </div>
           <p className='mt-8 text-gray-100'>A project portfolio and team overview for senior design at the University of Iowa</p>
         </div>
