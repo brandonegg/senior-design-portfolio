@@ -11,7 +11,7 @@ function TeamSection() {
         </div>
       <div className='flex flex-row space-x-24'>
         <div>
-  
+
         </div>
         <div>
 
