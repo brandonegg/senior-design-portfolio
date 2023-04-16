@@ -1,6 +1,8 @@
 import { useState } from "react";
+
+import brandonBackdrop from "../../../public/backdrops/writing-code.jpg";
 import brandonProfile from "../../../public/profiles/brandon.jpeg";
-import brandonBackdrop from "../../../public/backdrops/writing-code.jpg"
+import { ArrowDownIcon } from "@heroicons/react/24/solid";
 
 interface TeamMember {
   name: string,
@@ -44,10 +46,10 @@ const members: TeamMember[] = [
     },
     profileImg: brandonProfile,
   },
-]
+];
 
-function MemberWidget({key, details, selected, setSelected}: {
-  key: number,
+function MemberWidget({index, details, selected, setSelected}: {
+  index: number,
   details: TeamMember,
   selected?: number,
   setSelected?: React.Dispatch<React.SetStateAction<number>>,
@@ -62,7 +64,7 @@ function MemberWidget({key, details, selected, setSelected}: {
         <h3>{details.role}</h3>
       </div>
     </div>
-  )
+  );
 }
 
 /**
@@ -70,21 +72,32 @@ function MemberWidget({key, details, selected, setSelected}: {
  */
 function MemberSummary({details}: {details: TeamMember}) {
   return (
-    <div style={{
-      backgroundImage: `url("${details.summary.background}")`,
-      backgroundPosition: `center`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-    }} className="grow w-full bg-white drop-shadow-xl rounded-xl border border-stone-700">
+    <div className="relative grow w-full bg-white drop-shadow-xl rounded-xl border border-stone-700 overflow-hidden">
       <div style={{
-        WebkitBackdropFilter: `blur(20px)`,
-        backdropFilter: 'blur(20px)',
-      }} className="absolute top-0 right-0 bottom-0 left-0 text-center">
-        <h1 className="text-white text-xl">{details.name}</h1>
+        backgroundImage: `url("${details.summary.background}")`,
+        backgroundPosition: `center`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        width: '110%',
+        height: '110%',
+        transform: 'translate(-5%, -5%)',
+        filter: 'blur(10px) contrast(100%) opacity(40%) saturate(100%)',
+      }} className="absolute top-0 right-0 bottom-0 left-0"/>
+      <div className="grid place-items-center absolute top-0 right-0 bottom-0 left-0">
+        <div className="text-center">
+          <h1 className="text-black font-bold text-4xl">{details.name}</h1>
+          <div> {/** links to social media */}</div>
+        </div>
+        <p className="min-w-xl bg-white rounded-lg p-4 border border-stone-400">
+          {details.summary.body}
+        </p>
+        <button className="font-semibold text-lg px-8 py-2 text-white bg-black rounded-xl drop-shadow-lg">
+          Find out more
+        </button>
       </div>
     </div>
-  )
-} 
+  );
+}
 
 /**
  * Display team introduction for senior design.
@@ -105,8 +118,8 @@ function TeamSection() {
           <div className="inline-block w-96 space-y-8">
             {members.map((member, index) => {
               return (
-                <MemberWidget key={index} details={member} selected={selected} setSelected={setSelected} />
-              )
+                <MemberWidget index={index} key={index} details={member} selected={selected} setSelected={setSelected} />
+              );
             })}
           </div>
 
@@ -115,6 +128,11 @@ function TeamSection() {
             <MemberSummary details={members[0]} />
           </div>
         </div>
+      </div>
+
+      {/** Down arrow */}
+      <div className='absolute bottom-10'>
+        <ArrowDownIcon className='animate-bounce text-gray-700 h-12 w-12'/>
       </div>
     </section>
   );

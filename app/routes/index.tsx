@@ -3,8 +3,8 @@ import { ArrowDownIcon } from '@heroicons/react/24/solid';
 import uiowaLogo from '../../public/icons/uiowa-logo.jpg';
 
 import { NavBar } from '~/components/header';
-import { TeamSection } from '~/components/home/teams';
 import { ProjectSection } from '~/components/home/projects';
+import { TeamSection } from '~/components/home/teams';
 
 export function headers({
   loaderHeaders,
