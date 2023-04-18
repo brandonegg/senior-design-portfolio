@@ -26,6 +26,10 @@ const members: TeamMember[] = [
       body: "todo",
       background: brandonBackdrop,
     },
+    links: {
+      github: "https://github.com/brandonegg",
+      linkedin: "https://www.linkedin.com/in/brandon-egger/",
+    },
     profileImg: brandonProfile,
   },
   {
@@ -169,7 +173,7 @@ function TeamSection() {
 
           {/**Summary right */}
           <div className="hidden relative sm:flex flex-col w-[600px]">
-            <MemberSummary details={members[0]} />
+            <MemberSummary details={members[selected]} />
           </div>
         </div>
       </div>
