@@ -6,15 +6,15 @@ interface NavLinkDetails {
 const navLinks: NavLinkDetails[] = [
   {
     label: "Home",
-    href: "/",
+    href: "/#home",
   },
   {
     label: "Team",
-    href: "/",
+    href: "/#team",
   },
   {
     label: "Projects",
-    href: "/",
+    href: "/#projects",
   },
 ];
 
@@ -23,9 +23,12 @@ const navLinks: NavLinkDetails[] = [
  */
 function NavLink({ details }: { details: NavLinkDetails }) {
   return (
-    <li className="text-white py-2 px-4 text-xl font-semibold">
+    <a
+      href={details.href}
+      className="text-white py-2 px-4 text-xl font-semibold"
+    >
       {details.label}
-    </li>
+    </a>
   );
 }
 
