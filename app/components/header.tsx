@@ -1,6 +1,6 @@
 interface NavLinkDetails {
-  label: string,
-  href: string,
+  label: string;
+  href: string;
 }
 
 const navLinks: NavLinkDetails[] = [
@@ -15,16 +15,16 @@ const navLinks: NavLinkDetails[] = [
   {
     label: "Projects",
     href: "/",
-  }
+  },
 ];
 
 /**
  * Single navlink element of the navbar
  */
-function NavLink({details}: {details: NavLinkDetails}) {
+function NavLink({ details }: { details: NavLinkDetails }) {
   return (
     <li className="text-white py-2 px-4 text-xl font-semibold">
-        {details.label}
+      {details.label}
     </li>
   );
 }
@@ -38,9 +38,7 @@ function NavBar() {
       <div className="max-w-4xl bg-black mx-auto sm:rounded-xl drop-shadow-xl sm:border border-gray-300">
         <ul className="flex flex-row justify-center space-x-8">
           {navLinks.map((link, index) => {
-            return (
-                <NavLink key={index} details={link} />
-            );
+            return <NavLink key={index} details={link} />;
           })}
         </ul>
       </div>
@@ -48,6 +46,4 @@ function NavBar() {
   );
 }
 
-export {
-    NavBar,
-};
+export { NavBar };

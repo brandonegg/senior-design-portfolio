@@ -5,17 +5,17 @@ import brandonBackdrop from "../../../public/backdrops/writing-code.jpg";
 import brandonProfile from "../../../public/profiles/brandon.jpeg";
 
 interface TeamMember {
-  name: string,
-  role: string,
-  profileImg: string,
+  name: string;
+  role: string;
+  profileImg: string;
   summary: {
-    body: string,
-    background: string,
-  },
+    body: string;
+    background: string;
+  };
   links?: {
-    github?: string,
-    linkedin?: string,
-  }
+    github?: string;
+    linkedin?: string;
+  };
 }
 
 const members: TeamMember[] = [
@@ -48,15 +48,22 @@ const members: TeamMember[] = [
   },
 ];
 
-function MemberWidget({index, details, selected, setSelected}: {
-  index: number,
-  details: TeamMember,
-  selected?: number,
-  setSelected?: React.Dispatch<React.SetStateAction<number>>,
+function MemberWidget({
+  index,
+  details,
+  selected,
+  setSelected,
+}: {
+  index: number;
+  details: TeamMember;
+  selected?: number;
+  setSelected?: React.Dispatch<React.SetStateAction<number>>;
 }) {
   return (
     <div className="p-4 w-[320px] sm:w-full bg-white rounded-xl drop-shadow-xl border border-neutral-300 flex flex-row space-x-6">
-      <img alt={`${details.name} profile`} src={details.profileImg}
+      <img
+        alt={`${details.name} profile`}
+        src={details.profileImg}
         className="w-24 border border-neutral-900 rounded-full"
       />
       <div className="my-auto">
@@ -70,19 +77,22 @@ function MemberWidget({index, details, selected, setSelected}: {
 /**
  * The right side memory summary widget
  */
-function MemberSummary({details}: {details: TeamMember}) {
+function MemberSummary({ details }: { details: TeamMember }) {
   return (
     <div className="relative grow w-full bg-white drop-shadow-xl rounded-xl border border-stone-700 overflow-hidden">
-      <div style={{
-        backgroundImage: `url("${details.summary.background}")`,
-        backgroundPosition: `center`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        width: '110%',
-        height: '110%',
-        transform: 'translate(-5%, -5%)',
-        filter: 'blur(10px) contrast(100%) opacity(40%) saturate(100%)',
-      }} className="absolute top-0 right-0 bottom-0 left-0"/>
+      <div
+        style={{
+          backgroundImage: `url("${details.summary.background}")`,
+          backgroundPosition: `center`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          width: "110%",
+          height: "110%",
+          transform: "translate(-5%, -5%)",
+          filter: "blur(10px) contrast(100%) opacity(40%) saturate(100%)",
+        }}
+        className="absolute top-0 right-0 bottom-0 left-0"
+      />
       <div className="grid place-items-center absolute top-0 right-0 bottom-0 left-0">
         <div className="text-center">
           <h1 className="text-black font-bold text-4xl">{details.name}</h1>
@@ -107,18 +117,29 @@ function TeamSection() {
   const [selected, setSelected] = useState<number>(0);
 
   return (
-    <section id="team" className="relative snap-center snap-always h-full bg-gradient-to-r from-yellow-200/20 to-yellow-100/50 to-white grid place-items-center">
-      <div className='space-y-6 sm:space-y-12'>
-        <div className='text-center'>
-          <h1 className='text-4xl sm:text-5xl font-extrabold'>Meet the Team</h1>
-          <p className='text-gray-500 italic'>The brains behind the operation</p>
+    <section
+      id="team"
+      className="relative snap-center snap-always h-full bg-gradient-to-r from-yellow-200/20 to-yellow-100/50 to-white grid place-items-center"
+    >
+      <div className="space-y-6 sm:space-y-12">
+        <div className="text-center">
+          <h1 className="text-4xl sm:text-5xl font-extrabold">Meet the Team</h1>
+          <p className="text-gray-500 italic">
+            The brains behind the operation
+          </p>
         </div>
-        <div className='relative sm:flex sm:space-x-12 lg:space-x-24'>
+        <div className="relative sm:flex sm:space-x-12 lg:space-x-24">
           {/**Left side teammates */}
           <div className="block sm:inline-block w-full sm:mx-0 sm:w-96 space-y-4 sm:space-y-8">
             {members.map((member, index) => {
               return (
-                <MemberWidget index={index} key={index} details={member} selected={selected} setSelected={setSelected} />
+                <MemberWidget
+                  index={index}
+                  key={index}
+                  details={member}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
               );
             })}
           </div>
@@ -131,13 +152,11 @@ function TeamSection() {
       </div>
 
       {/** Down arrow */}
-      <div className='absolute bottom-10'>
-        <ArrowDownIcon className='animate-bounce text-gray-700 h-12 w-12'/>
+      <div className="absolute bottom-10">
+        <ArrowDownIcon className="animate-bounce text-gray-700 h-12 w-12" />
       </div>
     </section>
   );
 }
 
-export {
-    TeamSection
-};
+export { TeamSection };
