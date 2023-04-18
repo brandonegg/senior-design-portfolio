@@ -3,6 +3,8 @@ import { useState } from "react";
 
 import brandonBackdrop from "../../../public/backdrops/writing-code.jpg";
 import brandonProfile from "../../../public/profiles/brandon.jpeg";
+import linkedinIcon from "../../../public/icons/linkedin.svg";
+import githubIcon from "../../../public/icons/github.svg";
 
 interface TeamMember {
   name: string;
@@ -120,15 +122,34 @@ function MemberSummary({ details }: { details: TeamMember }) {
         }}
         className="absolute top-0 right-0 bottom-0 left-0"
       />
-      <div className="grid place-items-center absolute top-0 right-0 bottom-0 left-0">
+      <div className="flex flex-col p-4 absolute top-0 right-0 bottom-0 left-0 space-y-6">
         <div className="text-center">
           <h1 className="text-black font-bold text-4xl">{details.name}</h1>
-          <div> {/** links to social media */}</div>
+          <div className="space-x-2 mt-2">
+            {details.links?.github ? (
+              <a
+                target="_blank"
+                href={details.links.github}
+                className="inline-block"
+              >
+                <img className="bg-white rounded-full w-6" src={githubIcon} />
+              </a>
+            ) : undefined}
+            {details.links?.linkedin ? (
+              <a
+                target="_blank"
+                href={details.links.linkedin}
+                className="inline-block"
+              >
+                <img className="w-6" src={linkedinIcon} />
+              </a>
+            ) : undefined}
+          </div>
         </div>
-        <p className="min-w-xl bg-white rounded-lg p-4 border border-stone-400">
+        <p className="grow min-w-xl bg-white rounded-lg p-4 border border-stone-600">
           {details.summary.body}
         </p>
-        <button className="font-semibold text-lg px-8 py-2 text-white bg-black rounded-xl drop-shadow-lg">
+        <button className="mx-auto font-semibold text-lg px-8 py-2 text-white bg-black rounded-xl drop-shadow-lg">
           Find out more
         </button>
       </div>
