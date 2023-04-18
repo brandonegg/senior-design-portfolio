@@ -1,6 +1,11 @@
-interface NavLinkDetails {
+interface LinkDetails {
   label: string;
   href: string;
+}
+interface NavLinkDetails extends LinkDetails {
+  label: string;
+  href: string;
+  dropdowns?: LinkDetails[];
 }
 
 const navLinks: NavLinkDetails[] = [

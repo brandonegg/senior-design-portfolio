@@ -39,7 +39,7 @@ function ProjectSummary({ summary }: { summary: ProjectSummary }) {
         <h1 className="text-4xl text-white">{summary.title}</h1>
         <p className="text-lg text-neutral-300">{summary.description}</p>
       </div>
-      <button className="space-x-4 px-4 py-2 rounded-xl bg-yellow-200 border border-neutral-900 drop-shadow-xl hover:drop-shadow-none transition duration-200 mx-auto">
+      <button className="space-x-2 px-4 py-2 rounded-xl bg-yellow-200 border border-neutral-900 drop-shadow-xl hover:drop-shadow-none transition duration-200 mx-auto">
         <span className="font-semibold">Learn More</span>
         <ArrowUpRightIcon className="my-auto w-4 inline-block" />
       </button>
