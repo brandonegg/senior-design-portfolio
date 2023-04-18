@@ -29,19 +29,19 @@ const members: TeamMember[] = [
     profileImg: brandonProfile,
   },
   {
-    name: "Brandon Egger",
+    name: "Gokul Thangavel",
     role: "Software Engineer",
     summary: {
-      body: "todo",
+      body: "test2",
       background: brandonBackdrop,
     },
     profileImg: brandonProfile,
   },
   {
-    name: "Brandon Egger",
-    role: "Software Engineer",
+    name: "Orlando Reyes",
+    role: "Electrical Engineer",
     summary: {
-      body: "todo",
+      body: "test3",
       background: brandonBackdrop,
     },
     profileImg: brandonProfile,
@@ -56,21 +56,44 @@ function MemberWidget({
 }: {
   index: number;
   details: TeamMember;
-  selected?: number;
-  setSelected?: React.Dispatch<React.SetStateAction<number>>;
+  selected: number;
+  setSelected: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  return (
-    <div className="p-4 w-[320px] sm:w-full bg-white rounded-xl drop-shadow-xl border border-neutral-300 flex flex-row space-x-6">
-      <img
-        alt={`${details.name} profile`}
-        src={details.profileImg}
-        className="w-24 border border-neutral-900 rounded-full"
-      />
-      <div className="my-auto">
-        <h2 className="text-xl font-bold">{details.name}</h2>
-        <h3>{details.role}</h3>
+  const Contents = () => {
+    return (
+      <>
+        <img
+          alt={`${details.name} profile`}
+          src={details.profileImg}
+          className="w-20 border border-neutral-900 rounded-full"
+        />
+        <div className="my-auto">
+          <h2 className="text-xl font-bold">{details.name}</h2>
+          <h3 className="text-left">{details.role}</h3>
+        </div>
+      </>
+    );
+  };
+
+  if (selected === index) {
+    return (
+      <div className="p-2 w-[320px] sm:w-full bg-white rounded-xl border border-neutral-900 flex flex-row space-x-6">
+        <Contents />
       </div>
-    </div>
+    );
+  }
+
+  const onClick = () => {
+    setSelected(index);
+  };
+
+  return (
+    <button
+      onClick={onClick}
+      className="p-2 w-[320px] sm:w-full bg-white rounded-xl drop-shadow-xl border border-neutral-300 flex flex-row space-x-6"
+    >
+      <Contents />
+    </button>
   );
 }
 
@@ -121,10 +144,10 @@ function TeamSection() {
       id="team"
       className="relative snap-center snap-always h-full bg-gradient-to-r from-yellow-200/20 to-yellow-100/50 to-white grid place-items-center"
     >
-      <div className="space-y-6 sm:space-y-12">
+      <div className="space-y-6 sm:space-y-8">
         <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold">Meet the Team</h1>
-          <p className="text-gray-500 italic">
+          <h1 className="text-3xl sm:text-4xl font-extrabold">Meet the Team</h1>
+          <p className="text-gray-500 italic text-sm">
             The brains behind the operation
           </p>
         </div>
@@ -152,8 +175,8 @@ function TeamSection() {
       </div>
 
       {/** Down arrow */}
-      <div className="absolute bottom-10">
-        <ArrowDownIcon className="animate-bounce text-gray-700 h-12 w-12" />
+      <div className="absolute bottom-5">
+        <ArrowDownIcon className="animate-bounce text-gray-700 h-8 w-8" />
       </div>
     </section>
   );

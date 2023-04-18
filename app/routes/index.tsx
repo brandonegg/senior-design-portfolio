@@ -76,8 +76,8 @@ function TitleSection() {
         </div>
 
         {/** Down arrow */}
-        <div className="absolute bottom-10">
-          <ArrowDownIcon className="animate-bounce text-gray-300 h-12 w-12" />
+        <div className="absolute bottom-5">
+          <ArrowDownIcon className="animate-bounce text-gray-300 h-8 w-8" />
         </div>
       </div>
     </section>
