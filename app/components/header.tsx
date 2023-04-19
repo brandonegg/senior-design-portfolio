@@ -1,3 +1,5 @@
+import { UserIcon } from "@heroicons/react/24/solid";
+
 interface LinkDetails {
   label: string;
   href: string;
@@ -66,9 +68,10 @@ function NavLink({ details }: { details: NavLinkDetails }) {
                 <a
                   key={index}
                   href={dropdown.href}
-                  className="px-2 py-1 text-black font-normal text-left text-sm hover:bg-neutral-400"
+                  className="flex flex-row justify-between px-2 py-1 text-black font-normal text-left text-sm hover:bg-neutral-400"
                 >
-                  {dropdown.label}
+                  <span>{dropdown.label}</span>
+                  <UserIcon className="w-4 h-4 my-auto" />
                 </a>
               );
             })}
