@@ -4,10 +4,15 @@ interface LinkDetails {
   label: string;
   href: string;
 }
+
+interface DropdownLinkDetails extends LinkDetails {
+  Icon: JSX.Element;
+}
+
 interface NavLinkDetails extends LinkDetails {
   label: string;
   href: string;
-  dropdowns?: LinkDetails[];
+  dropdowns?: DropdownLinkDetails[];
 }
 
 const navLinks: NavLinkDetails[] = [
@@ -22,14 +27,17 @@ const navLinks: NavLinkDetails[] = [
       {
         label: "Orlando",
         href: "/team/orlando",
+        Icon: <UserIcon className="w-4 h-4 my-auto" />,
       },
       {
         label: "Gokul",
         href: "/team/gokul",
+        Icon: <UserIcon className="w-4 h-4 my-auto" />,
       },
       {
         label: "Brandon",
         href: "/team/brandon",
+        Icon: <UserIcon className="w-4 h-4 my-auto" />,
       },
     ],
   },
@@ -71,7 +79,7 @@ function NavLink({ details }: { details: NavLinkDetails }) {
                   className="flex flex-row justify-between px-2 py-1 text-black font-normal text-left text-sm hover:bg-neutral-400"
                 >
                   <span>{dropdown.label}</span>
-                  <UserIcon className="w-4 h-4 my-auto" />
+                  {dropdown.Icon}
                 </a>
               );
             })}
