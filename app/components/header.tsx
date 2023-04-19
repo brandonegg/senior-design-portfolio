@@ -6,7 +6,7 @@ interface LinkDetails {
 }
 
 interface DropdownLinkDetails extends LinkDetails {
-  Icon: JSX.Element;
+  Icon?: JSX.Element;
 }
 
 interface NavLinkDetails extends LinkDetails {
@@ -36,7 +36,7 @@ const navLinks: NavLinkDetails[] = [
       },
       {
         label: "Brandon",
-        href: "/team/brandon",
+        href: "https://brandonegger.com/",
         Icon: <UserIcon className="w-4 h-4 my-auto" />,
       },
     ],
@@ -44,6 +44,16 @@ const navLinks: NavLinkDetails[] = [
   {
     label: "Projects",
     href: "/#projects",
+    dropdowns: [
+      {
+        label: "Temperature Monitor",
+        href: "project/temperature_probe",
+      },
+      {
+        label: "Safety Laser",
+        href: "project/safety_laser",
+      },
+    ],
   },
 ];
 
@@ -58,7 +68,7 @@ function NavLink({ details }: { details: NavLinkDetails }) {
     >
       {details.label}
       {details.dropdowns ? (
-        <div className="hidden group-hover:grid place-items-center absolute end-full left-0 right-0 -translate-x-1/4 text-center w-full">
+        <div className="hidden group-hover:block justify-center absolute end-full left-1/2 right-1/2 -translate-x-2/4 text-center w-fit">
           <div
             className=""
             style={{
@@ -68,17 +78,20 @@ function NavLink({ details }: { details: NavLinkDetails }) {
               borderRight: "10px solid transparent",
               borderBottom: "10px solid white",
               transform: "translateY(1px)",
+              margin: "auto",
             }}
           ></div>
-          <div className="flex flex-col border bg-white border-black w-32 start mx-auto rounded-lg divide-y overflow-hidden">
+          <div className="flex flex-col border bg-white left-1/2 right-1/2 border-black w-fit start mx-auto rounded-lg divide-y overflow-hidden">
             {details.dropdowns?.map((dropdown, index) => {
               return (
                 <a
                   key={index}
                   href={dropdown.href}
-                  className="flex flex-row justify-between px-2 py-1 text-black font-normal text-left text-sm hover:bg-neutral-400"
+                  className="w-full flex flex-row space-x-2 justify-between px-2 py-1 text-black mx-auto font-normal text-left text-sm hover:bg-neutral-400"
                 >
-                  <span>{dropdown.label}</span>
+                  <span className="whitespace-nowrap block grow">
+                    {dropdown.label}
+                  </span>
                   {dropdown.Icon}
                 </a>
               );
