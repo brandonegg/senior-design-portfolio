@@ -47,7 +47,7 @@ const members: TeamMember[] = [
     name: "Orlando Reyes",
     role: "Electrical Engineer",
     summary: {
-      body: "test3",
+      body: "Interested in hardware design and green energy conversion. Mainly responsible for the hardware portions of our senior design projects. Completed Summer/Fall co-op in 2022 and a Summer internship in 2023 at Collins Aerospace. BSE pending December 2023, planning to enter the workforce upon graduation.",
       background: brandonBackdrop,
     },
     profileImg: brandonProfile,
