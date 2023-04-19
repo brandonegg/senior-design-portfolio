@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import brandonBackdrop from "../../../public/backdrops/writing-code.jpg";
 import brandonProfile from "../../../public/profiles/brandon.jpeg";
+import gokulProfile from "../../../public/profiles/GokulBio.jpg";
 import linkedinIcon from "../../../public/icons/linkedin.svg";
 import githubIcon from "../../../public/icons/github.svg";
 
@@ -38,10 +39,10 @@ const members: TeamMember[] = [
     name: "Gokul Thangavel",
     role: "Software Engineer",
     summary: {
-      body: "test2",
+      body: "Gokul is studying Computer Science and Engineering. He has spent his last year working at Collins Aerospace as a Systems/ Project Engineer Co-op. Gokul has spent the majority of his time collaborating with other engineers in software testing and project management. He has recently switched to a data science position where he aims to hone his skills in Python. With his classroom experience and his time at Collins, he has a comfortable foundation with Python, C++, JS, and Java that heavily relate to this design project. ",
       background: brandonBackdrop,
     },
-    profileImg: brandonProfile,
+    profileImg: gokulProfile,
   },
   {
     name: "Orlando Reyes",
@@ -146,7 +147,7 @@ function MemberSummary({ details }: { details: TeamMember }) {
             ) : undefined}
           </div>
         </div>
-        <p className="grow min-w-xl bg-white rounded-lg p-4 border border-stone-600">
+        <p className="text-sm grow min-w-xl bg-white rounded-lg p-4 border border-stone-600">
           {details.summary.body}
         </p>
         <button className="mx-auto font-semibold text-lg px-8 py-2 text-white bg-black rounded-xl drop-shadow-lg">
