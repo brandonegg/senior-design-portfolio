@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import brandonBackdrop from "../../../public/backdrops/writing-code.jpg";
 import brandonProfile from "../../../public/profiles/brandon.jpeg";
+import gokulProfile from "../../../public/profiles/GokulBio.jpg";
 import linkedinIcon from "../../../public/icons/linkedin.svg";
 import githubIcon from "../../../public/icons/github.svg";
 
@@ -41,7 +42,7 @@ const members: TeamMember[] = [
       body: "Gokul is studying Computer Science and Engineering. He has spent his last year working at Collins Aerospace as a Systems/ Project Engineer Co-op. Gokul has spent the majority of his time collaborating with other engineers in software testing and project management. He has recently switched to a data science position where he aims to hone his skills in Python. With his classroom experience and his time at Collins, he has a comfortable foundation with Python, C++, JS, and Java that heavily relate to this design project. ",
       background: brandonBackdrop,
     },
-    profileImg: brandonProfile,
+    profileImg: gokulProfile,
   },
   {
     name: "Orlando Reyes",
