@@ -72,7 +72,7 @@ function MemberWidget({
         <img
           alt={`${details.name} profile`}
           src={details.profileImg}
-          className="w-20 border border-neutral-900 rounded-full"
+          className="w-20 h-20 border border-neutral-900 rounded-full"
         />
         <div className="my-auto">
           <h2 className="text-xl font-bold">{details.name}</h2>
