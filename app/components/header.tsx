@@ -16,6 +16,20 @@ const navLinks: NavLinkDetails[] = [
   {
     label: "Team",
     href: "/#team",
+    dropdowns: [
+      {
+        label: "Orlando",
+        href: "/team/orlando",
+      },
+      {
+        label: "Gokul",
+        href: "/team/gokul",
+      },
+      {
+        label: "Brandon",
+        href: "/team/brandon",
+      },
+    ],
   },
   {
     label: "Projects",
@@ -30,9 +44,37 @@ function NavLink({ details }: { details: NavLinkDetails }) {
   return (
     <a
       href={details.href}
-      className="text-white py-2 px-4 text-xl font-semibold"
+      className="group relative text-white py-2 px-4 text-xl font-semibold"
     >
       {details.label}
+      {details.dropdowns ? (
+        <div className="hidden group-hover:grid place-items-center absolute end-full left-0 right-0 -translate-x-1/4 text-center w-full">
+          <div
+            className=""
+            style={{
+              width: 0,
+              height: 0,
+              borderLeft: "10px solid transparent",
+              borderRight: "10px solid transparent",
+              borderBottom: "10px solid white",
+              transform: "translateY(1px)",
+            }}
+          ></div>
+          <div className="flex flex-col border bg-white border-black w-32 start mx-auto rounded-lg divide-y overflow-hidden">
+            {details.dropdowns?.map((dropdown, index) => {
+              return (
+                <a
+                  key={index}
+                  href={dropdown.href}
+                  className="px-2 py-1 text-black font-normal text-left text-sm hover:bg-neutral-400"
+                >
+                  {dropdown.label}
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      ) : undefined}
     </a>
   );
 }
