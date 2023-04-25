@@ -43,7 +43,12 @@ export default function TempProbeProjectPage() {
           maxWidth: "800px",
         }}
       >
-        In this laboratory exercise, the goal was to design a temperature-measuring system with a web interface. It contained a computer utilized for user interface, display, and control. A thermometer sensor that was about 2m long, and capable of withstanding some force. A third box contained a display to read out the temperature measured, a button, a battery, and a power switch.
+        In this laboratory exercise, the goal was to design a
+        temperature-measuring system with a web interface. It contained a
+        computer utilized for user interface, display, and control. A
+        thermometer sensor that was about 2m long, and capable of withstanding
+        some force. A third box contained a display to read out the temperature
+        measured, a button, a battery, and a power switch.
       </p>
       <div
         style={{
@@ -119,7 +124,6 @@ export default function TempProbeProjectPage() {
           alt="Image 5"
           style={{ width: "600px", marginBottom: "1rem" }}
         />
-        
       </div>
       <h2
         style={{
@@ -140,10 +144,15 @@ export default function TempProbeProjectPage() {
           color: "purple",
         }}
       >
-        <p><a href="https://github.com/brandonegg/tempProbe">GitHub</a></p>
-        <p><a href="https://docs.google.com/document/d/18lWFbsJdO7S7cYBTHRVicrGnA-bmipCV3nlR_OmbQhU/edit?usp=sharing">Lab Report</a></p>
+        <p>
+          <a href="https://github.com/brandonegg/tempProbe">GitHub</a>
+        </p>
+        <p>
+          <a href="https://docs.google.com/document/d/18lWFbsJdO7S7cYBTHRVicrGnA-bmipCV3nlR_OmbQhU/edit?usp=sharing">
+            Lab Report
+          </a>
+        </p>
       </p>
     </div>
   );
 }
-   
