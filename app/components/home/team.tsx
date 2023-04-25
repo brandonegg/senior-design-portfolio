@@ -43,6 +43,10 @@ const members: TeamMember[] = [
       body: "Gokul is studying Computer Science and Engineering. He has spent his last year working at Collins Aerospace as a Systems/ Project Engineer Co-op. Gokul has spent the majority of his time collaborating with other engineers in software testing and project management. He has recently switched to a data science position where he aims to hone his skills in Python. With his classroom experience and his time at Collins, he has a comfortable foundation with Python, C++, JS, and Java that heavily relate to this design project. ",
       background: brandonBackdrop,
     },
+    links: {
+      github: "https://github.com/GokesT",
+      linkedin: "https://www.linkedin.com/in/gokulthangavel/",
+    },
     profileImg: gokulProfile,
   },
   {
@@ -73,7 +77,7 @@ function MemberWidget({
         <img
           alt={`${details.name} profile`}
           src={details.profileImg}
-          className="w-20 border border-neutral-900 rounded-full"
+          className="w-20 h-20 border border-neutral-900 rounded-full"
         />
         <div className="my-auto">
           <h2 className="text-xl font-bold">{details.name}</h2>
