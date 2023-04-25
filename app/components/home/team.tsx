@@ -4,6 +4,7 @@ import { useState } from "react";
 import brandonBackdrop from "../../../public/backdrops/writing-code.jpg";
 import brandonProfile from "../../../public/profiles/brandon.jpeg";
 import gokulProfile from "../../../public/profiles/GokulBio.jpg";
+import orlandoProfile from "../../../public/profiles/orlando.jpg";
 import linkedinIcon from "../../../public/icons/linkedin.svg";
 import githubIcon from "../../../public/icons/github.svg";
 
@@ -51,7 +52,7 @@ const members: TeamMember[] = [
       body: "Interested in hardware design and green energy conversion. Mainly responsible for the hardware portions of our senior design projects. Completed Summer/Fall co-op in 2022 and a Summer internship in 2023 at Collins Aerospace. BSE pending December 2023, planning to enter the workforce upon graduation.",
       background: brandonBackdrop,
     },
-    profileImg: brandonProfile,
+    profileImg: orlandoProfile,
   },
 ];
 
