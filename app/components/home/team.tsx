@@ -10,6 +10,7 @@ import githubIcon from "../../../public/icons/github.svg";
 interface TeamMember {
   name: string;
   role: string;
+  page: string;
   profileImg: string;
   summary: {
     body: string;
@@ -25,6 +26,7 @@ const members: TeamMember[] = [
   {
     name: "Brandon Egger",
     role: "Software Engineer",
+    page: "https://brandonegger.com/",
     summary: {
       body: "todo",
       background: brandonBackdrop,
@@ -38,6 +40,7 @@ const members: TeamMember[] = [
   {
     name: "Gokul Thangavel",
     role: "Software Engineer",
+    page: "/team/gokul",
     summary: {
       body: "Gokul is studying Computer Science and Engineering. He has spent his last year working at Collins Aerospace as a Systems/ Project Engineer Co-op. Gokul has spent the majority of his time collaborating with other engineers in software testing and project management. He has recently switched to a data science position where he aims to hone his skills in Python. With his classroom experience and his time at Collins, he has a comfortable foundation with Python, C++, JS, and Java that heavily relate to this design project. ",
       background: brandonBackdrop,
@@ -51,6 +54,7 @@ const members: TeamMember[] = [
   {
     name: "Orlando Reyes",
     role: "Electrical Engineer",
+    page: "/team/orlando",
     summary: {
       body: "test3",
       background: brandonBackdrop,
@@ -101,7 +105,7 @@ function MemberWidget({
   return (
     <button
       onClick={onClick}
-      className="p-2 w-[320px] sm:w-full bg-white rounded-xl drop-shadow-xl border border-neutral-300 flex flex-row space-x-6"
+      className="hover:drop-shadow-none ease-out duration-200 p-2 w-[320px] sm:w-full bg-white rounded-xl drop-shadow-xl border border-neutral-300 flex flex-row space-x-6"
     >
       <Contents />
     </button>
@@ -129,7 +133,7 @@ function MemberSummary({ details }: { details: TeamMember }) {
       />
       <div className="flex flex-col p-4 absolute top-0 right-0 bottom-0 left-0 space-y-6">
         <div className="text-center">
-          <h1 className="text-black font-bold text-4xl">{details.name}</h1>
+          <h1 className="text-black font-bold text-2xl">{details.name}</h1>
           <div className="space-x-2 mt-2">
             {details.links?.github ? (
               <a
@@ -151,12 +155,15 @@ function MemberSummary({ details }: { details: TeamMember }) {
             ) : undefined}
           </div>
         </div>
-        <p className="text-sm grow min-w-xl bg-white rounded-lg p-4 border border-stone-600">
+        <p className="text-sm grow min-w-xl bg-white rounded-lg p-2 border border-stone-600">
           {details.summary.body}
         </p>
-        <button className="mx-auto font-semibold text-lg px-8 py-2 text-white bg-black rounded-xl drop-shadow-lg">
+        <a
+          href={details.page}
+          className="hover:scale-110 hover:drop-shadow-xl ease-out duration-200 mx-auto font-semibold text-lg px-8 py-2 text-white bg-black rounded-xl drop-shadow-lg"
+        >
           Find out more
-        </button>
+        </a>
       </div>
     </div>
   );

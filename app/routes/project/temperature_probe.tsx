@@ -3,6 +3,7 @@ import tempBox from "../../../public/backdrops/tempBox.jpg";
 import getReq from "../../../public/backdrops/httpGetRequestFlowchart.jpg";
 import flowTemp from "../../../public/backdrops/FlowchartTempSensor.jpg";
 import txtMessage from "../../../public/backdrops/txtMessageFlowChart.jpg";
+import { NavBar } from "~/components/header";
 
 export default function TempProbeProjectPage() {
   return (
@@ -17,11 +18,13 @@ export default function TempProbeProjectPage() {
         padding: "2rem",
       }}
     >
+      <NavBar />
       <h1
         style={{
           fontSize: "3rem",
           fontWeight: "bold",
-          margin: "1rem 0",
+          marginTop: "4rem",
+          marginBottom: "1rem",
         }}
       >
         Temperature Probe Lab
