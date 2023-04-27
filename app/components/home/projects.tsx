@@ -2,7 +2,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
 import thermometerIcon from "../../../public/projects/thermometer.svg";
-import laserIcon from "../../../public/projects/laser-symbol.svg";
+import laserIcon from "../../../public/projects/laser_lab/laser-symbol.svg";
 
 interface ProjectSummary {
   title: string;
