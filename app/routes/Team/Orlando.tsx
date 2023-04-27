@@ -46,9 +46,9 @@ export default function Orlando() {
             </span>
             <ul>
               <li>
-                <span style={{ fontWeight: "bold" }}>Chess:</span> I've been
-                playing chess for over 15 years and have achieved the title of
-                Chess expert
+                <span style={{ fontWeight: "bold" }}>Cooking:</span> I've been
+                cooking from-scratch meals for my friends and family for about
+                10 years.
               </li>
               <li>
                 <span style={{ fontWeight: "bold" }}>Flag Football:</span> In
