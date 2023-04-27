@@ -29,7 +29,8 @@ export default function Orlando() {
           </h1>
           <p>
             <span style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-              I'm currently a senior studying Electrical Engineering at the University of Iowa.
+              I'm currently a senior studying Electrical Engineering at the
+              University of Iowa.
             </span>
             <br />
             <br />
