@@ -51,16 +51,15 @@ export default function Orlando() {
                 10 years.
               </li>
               <li>
-                <span style={{ fontWeight: "bold" }}>Flag Football:</span> In
-                the fall, I play intramural flag football with a group of
-                friends. It's a great time and I have created a lot of cool
-                memories!
+                <span style={{ fontWeight: "bold" }}>Exercise:</span> I have played 
+                baseball and various raquet sports all my life and have been going to
+                the gym regularly.
               </li>
               <li>
-                <span style={{ fontWeight: "bold" }}>Reading:</span> I recently
-                got into reading books, currently I'm reading{" "}
-                <em>Atomic Habits</em> and <em>Thinking, Fast and Slow</em>.
-                Feel free to comment book recommendations!
+                <span style={{ fontWeight: "bold" }}>Movies:</span> My roomate and I watch through
+                entire movie franchises (it's funnier when they're bad), currently we're watching 
+                the entire extended Lord of the Rings series.
+                Feel free to comment movie series recommendations!
               </li>
             </ul>
           </p>
