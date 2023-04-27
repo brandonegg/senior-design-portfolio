@@ -51,7 +51,7 @@ function Cover() {
           </div>
           <img
             alt="esp32 frequency reading"
-            className="mx-auto w-80 rounded-xl drop-shadow-xl border-2 border-neutral-900"
+            className="mx-auto w-80 rounded-xl shadow-xl shadow-neutral-400/50 border-2 border-neutral-900"
             src={esp32img}
           />
         </div>
