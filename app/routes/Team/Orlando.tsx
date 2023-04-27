@@ -1,6 +1,6 @@
 import orlandoPage from "../../../public/profiles/orlandoPage.jpg";
 
-export default function orlando() {
+export default function Orlando() {
   return (
     <div
       style={{
@@ -25,12 +25,11 @@ export default function orlando() {
         />
         <div style={{ marginLeft: "3rem", marginBottom: "3rem" }}>
           <h1 style={{ fontSize: "3rem", fontWeight: "bold" }}>
-            orlando Thangavel
+            Orlando Reyes
           </h1>
           <p>
             <span style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-              I'm currently a senior studying Computer Science and Engineering
-              at the University of Iowa.
+              I'm currently a senior studying Electrical Engineering at the University of Iowa.
             </span>
             <br />
             <br />
