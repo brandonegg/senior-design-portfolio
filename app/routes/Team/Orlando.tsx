@@ -4,7 +4,7 @@ export default function Orlando() {
   return (
     <div
       style={{
-        backgroundColor: "#FFCBA4",
+        backgroundColor: "#008000",
         height: "100vh",
         display: "flex",
         alignItems: "center",
@@ -51,15 +51,16 @@ export default function Orlando() {
                 10 years.
               </li>
               <li>
-                <span style={{ fontWeight: "bold" }}>Exercise:</span> I have played 
-                baseball and various raquet sports all my life and have been going to
-                the gym regularly.
+                <span style={{ fontWeight: "bold" }}>Exercise:</span> I have
+                played baseball and various raquet sports all my life and have
+                been going to the gym regularly.
               </li>
               <li>
-                <span style={{ fontWeight: "bold" }}>Movies:</span> My roomate and I watch through
-                entire movie franchises (it's funnier when they're bad), currently we're watching 
-                the entire extended Lord of the Rings series.
-                Feel free to comment movie series recommendations!
+                <span style={{ fontWeight: "bold" }}>Movies:</span> My roomate
+                and I watch through entire movie franchises (it's funnier when
+                they're bad), currently we're watching the entire extended Lord
+                of the Rings series. Feel free to comment movie series
+                recommendations!
               </li>
             </ul>
           </p>
