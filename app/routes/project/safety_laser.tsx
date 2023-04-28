@@ -1,7 +1,6 @@
 import { NavBar } from "~/components/header";
 import laserIcon from "../../../public/projects/laser_lab/laser-symbol.svg";
 import esp32img from "../../../public/projects/laser_lab/esp32_demo.png";
-import { CommentBox } from "~/components/comments";
 import { useLoaderData, useLocation } from "@remix-run/react";
 import { json } from "@remix-run/node";
 import { DiscussionEmbed } from "disqus-react";
@@ -131,7 +130,7 @@ export default function SafetyLaserProjectPage() {
       <Cover />
       <Purpose />
       <Technologies />
-      <DiscussionEmbed
+      {/* <DiscussionEmbed
         shortname="example"
         config={{
           url: location.pathname,
@@ -139,7 +138,7 @@ export default function SafetyLaserProjectPage() {
           title: "Safety Laser",
           language: "en-US", //e.g. for Traditional Chinese (Taiwan)
         }}
-      />
+      /> */}
     </main>
   );
 }

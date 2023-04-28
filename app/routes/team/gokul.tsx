@@ -69,9 +69,7 @@ export default function Gokul() {
       <NavBar />
       <div className="space-y-12">
         <GokulBlog />
-        <div className="mx-auto">
-          <CommentBox projectId={data.ENV.COMMENTBOX_PROJECT_ID} />
-        </div>
+        <div className="mx-auto"></div>
       </div>
     </main>
   );
