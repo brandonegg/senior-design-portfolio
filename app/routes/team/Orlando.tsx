@@ -1,8 +1,9 @@
+import { NavBar } from "~/components/header";
 import orlandoPage from "../../../public/profiles/orlandoPage.jpg";
 
 export default function Orlando() {
   return (
-    <div
+    <main
       style={{
         backgroundColor: "#008000",
         height: "100vh",
@@ -11,6 +12,7 @@ export default function Orlando() {
         justifyContent: "center",
       }}
     >
+      <NavBar />
       <div style={{ display: "flex", alignItems: "center" }}>
         <img
           src={orlandoPage}
@@ -66,6 +68,6 @@ export default function Orlando() {
           </p>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
