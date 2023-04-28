@@ -5,7 +5,7 @@
     "build": "remix build",
     "predev": "rimraf ./public/_redirects",
     "dev": "remix dev",
-    "start": "remix-serve build",
+    "start": "remix build && remix-serve build",
     "typecheck": "tsc -b",
     "lint": "eslint ./**/*.{ts,tsx}",
     "format": "eslint --fix ./**/*.{ts,tsx}",
