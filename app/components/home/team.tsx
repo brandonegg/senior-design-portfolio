@@ -29,7 +29,7 @@ const members: TeamMember[] = [
     role: "Software Engineer",
     page: "https://brandonegger.com/",
     summary: {
-      body: "todo",
+      body: "Brandon is a Computer Science and Engineering major at the University of Iowa. He has an extensive background as a full stack application developer across several industries. He is particularly interested in machine learning and big data analysis. Brandon’s wide experience in a variety of software languages made him a critical member of the team. He hopes to continue his education and pursue a master’s in computer science!",
       background: brandonBackdrop,
     },
     links: {
