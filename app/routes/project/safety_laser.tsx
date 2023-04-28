@@ -2,6 +2,7 @@ import { NavBar } from "~/components/header";
 import laserIcon from "../../../public/projects/laser_lab/laser-symbol.svg";
 import esp32img from "../../../public/projects/laser_lab/esp32_demo.png";
 import { Helmet } from "react-helmet";
+import { CusDiscussion } from "~/components/comments";
 
 const topics = [
   "esp32",
@@ -126,17 +127,10 @@ export default function SafetyLaserProjectPage() {
       <Cover />
       <Purpose />
       <Technologies />
-      <div
-        id="cusdis_thread"
-        data-host="https://cusdis.com"
-        data-app-id="8d74cde2-7749-4457-8548-79700a7c64d9"
-        data-page-id="project-safety-laser"
-        data-page-url="https://senior-design-portfolio.herokuapp.com/project/safety_laser"
-        data-page-title="Project Safety Laser"
-      ></div>
-      <Helmet>
-        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-      </Helmet>
+      <div className="p-4 max-w-4xl space-y-8 mx-auto mt-4">
+        <h1 className="text-4xl font-bold">Discussion</h1>
+        <CusDiscussion id="project-safety-laser" title="Project Safety Laser" />
+      </div>
     </main>
   );
 }
