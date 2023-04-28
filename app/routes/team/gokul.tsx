@@ -1,7 +1,20 @@
 import { NavBar } from "~/components/header";
 import gokulPage from "../../../public/profiles/gokulPage.jpg";
+import { CommentBox } from "~/components/comments";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+
+export function loader() {
+  return json({
+    ENV: {
+      COMMENTBOX_PROJECT_ID: process.env.COMMENTBOX_PROJECT_ID,
+    },
+  });
+}
 
 export default function Gokul() {
+  const data = useLoaderData<typeof loader>();
+
   return (
     <div
       style={{
@@ -12,7 +25,6 @@ export default function Gokul() {
         justifyContent: "center",
       }}
     >
-      <NavBar />
       <div style={{ display: "flex", alignItems: "center" }}>
         <img
           src={gokulPage}
@@ -68,6 +80,7 @@ export default function Gokul() {
           </p>
         </div>
       </div>
+      {/* <CommentBox projectId={data.ENV.COMMENTBOX_PROJECT_ID} /> */}
     </div>
   );
 }
