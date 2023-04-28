@@ -4,6 +4,8 @@ import esp32img from "../../../public/projects/laser_lab/esp32_demo.png";
 import { useLocation } from "@remix-run/react";
 import { DiscussionEmbed } from "disqus-react";
 import { ClientOnly } from "remix-utils";
+import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const topics = [
   "esp32",
@@ -15,6 +17,25 @@ const topics = [
   "infrared",
   "hardware",
 ];
+
+// Helper to add scripts to our page
+const insertScript = (src: string, id: string, parentElement: HTMLElement) => {
+  const script = window.document.createElement("script");
+  script.async = true;
+  script.src = src;
+  script.id = id;
+  parentElement.appendChild(script);
+
+  return script;
+};
+
+// Helper to remove scripts from our page
+const removeScript = (id: string, parentElement: HTMLElement) => {
+  const script = window.document.getElementById(id);
+  if (script) {
+    parentElement.removeChild(script);
+  }
+};
 
 function Cover() {
   return (
@@ -130,7 +151,7 @@ export default function SafetyLaserProjectPage() {
       <Cover />
       <Purpose />
       <Technologies />
-      <ClientOnly>
+      {/* <ClientOnly>
         {() => {
           return (
             <DiscussionEmbed
@@ -144,7 +165,19 @@ export default function SafetyLaserProjectPage() {
             />
           );
         }}
-      </ClientOnly>
+      </ClientOnly> */}
+
+      <div
+        id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="8d74cde2-7749-4457-8548-79700a7c64d9"
+        data-page-id="project-safety-laser"
+        data-page-url="https://senior-design-portfolio.herokuapp.com/project/safety_laser"
+        data-page-title="Project Safety Laser"
+      ></div>
+      <Helmet>
+        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+      </Helmet>
     </main>
   );
 }
