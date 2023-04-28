@@ -2,6 +2,7 @@ import { NavBar } from "~/components/header";
 import gokulPage from "../../../public/profiles/gokulPage.jpg";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
+import { CusDiscussion } from "~/components/comments";
 
 export function loader() {
   return json({
@@ -13,15 +14,15 @@ export function loader() {
 
 function GokulBlog() {
   return (
-    <div className="flex flex-row space-x-12">
-      <div className="rounded-full w-64 h-64 overflow-hidden">
+    <div className="m-4 flex flex-col md:flex-row space-y-4 md:space-x-12">
+      <div className="mx-auto shrink-0 rounded-full w-64 h-64 overflow-hidden">
         <img
           className="object-cover h-full"
           src={gokulPage}
           alt="Gokul playing chess"
         />
       </div>
-      <div className="flex flex-col space-y-6 h-fit my-auto">
+      <div className="shrink flex flex-col space-y-6 h-fit my-auto">
         <section className="space-y-2">
           <h1 className="text-6xl font-bold">Gokul Thangavel</h1>
           <h2 className="font-bold text-xl">
@@ -57,8 +58,6 @@ function GokulBlog() {
 }
 
 export default function Gokul() {
-  const data = useLoaderData<typeof loader>();
-
   return (
     <main
       className="grid place-items-center min-h-screen"
@@ -67,9 +66,15 @@ export default function Gokul() {
       }}
     >
       <NavBar />
-      <div className="space-y-12">
+      <div className="space-y-12 mt-20 max-w-6xl">
         <GokulBlog />
-        <div className="mx-auto"></div>
+        <div className="p-4 max-w-4xl space-y-8 mx-auto mt-4 bg-white border-black border-t border-x rounded-t-xl shadow-xl">
+          <h1 className="text-4xl font-bold">Discussion</h1>
+          <CusDiscussion
+            id="project-temperature-probe"
+            title="Project Temperature Probe"
+          />
+        </div>
       </div>
     </main>
   );
