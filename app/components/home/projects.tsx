@@ -2,7 +2,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
 import thermometerIcon from "../../../public/projects/thermometer.svg";
-import laserIcon from "../../../public/projects/laser-symbol.svg";
+import laserIcon from "../../../public/projects/laser_lab/laser-symbol.svg";
 
 interface ProjectSummary {
   title: string;
@@ -16,14 +16,14 @@ const projects: ProjectSummary[] = [
     title: "Wireless Temperature Probe",
     description:
       "A compact temperature probe which connects over WiFi to a computer for remote monitoring.",
-    link: "",
+    link: "/project/temperature_probe",
     icon: thermometerIcon,
   },
   {
     title: "IR Safety Monitor",
     description:
       "A safety device used for notifying operators when an object has entered a restricted area.",
-    link: "",
+    link: "/project/safety_laser",
     icon: laserIcon,
   },
 ];
@@ -39,10 +39,13 @@ function ProjectSummary({ summary }: { summary: ProjectSummary }) {
         <h1 className="text-4xl text-white">{summary.title}</h1>
         <p className="text-lg text-neutral-300">{summary.description}</p>
       </div>
-      <button className="space-x-2 px-4 py-2 rounded-xl bg-yellow-200 border border-neutral-900 drop-shadow-xl hover:drop-shadow-none transition duration-200 mx-auto">
+      <a
+        href={summary.link}
+        className="group space-x-2 px-4 py-2 rounded-xl bg-yellow-200 border border-neutral-900 drop-shadow-xl hover:drop-shadow-none transition duration-200 mx-auto"
+      >
         <span className="font-semibold">Learn More</span>
-        <ArrowUpRightIcon className="my-auto w-4 inline-block" />
-      </button>
+        <ArrowUpRightIcon className="group-hover:translate-x-1 group-hover:-translate-y-1 ease-out duration-200 my-auto w-4 inline-block" />
+      </a>
     </div>
   );
 }
@@ -60,12 +63,14 @@ function ProjectSelector({
 }) {
   if (selectedIndex === index) {
     return (
-      <div className="flex flex-row bg-black border border-white rounded-2xl p-2 space-x-2 w-72">
+      <div className="flex flex-row bg-black border border-white rounded-2xl p-2 md:space-x-2 md:w-72">
         <img
           className="p-2 bg-neutral-300 rounded-xl w-16 h-16 drop-shadow-lg"
           src={summary.icon}
         />
-        <h1 className="grow my-auto text-white text-center">{summary.title}</h1>
+        <h1 className="hidden md:block grow my-auto text-white text-center">
+          {summary.title}
+        </h1>
       </div>
     );
   }
@@ -77,7 +82,7 @@ function ProjectSelector({
   return (
     <button
       onClick={onClick}
-      className="drop-shadow-xl flex flex-row bg-white border border-black rounded-2xl p-2 space-x-2 w-72"
+      className="hover:scale-110 ease-out duration-300 drop-shadow-xl flex flex-row bg-white border border-black rounded-2xl p-2 space-x-2 w-72"
     >
       <img
         className="p-2 bg-black rounded-xl w-16 h-16 drop-shadow-lg"

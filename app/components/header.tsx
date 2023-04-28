@@ -47,11 +47,11 @@ const navLinks: NavLinkDetails[] = [
     dropdowns: [
       {
         label: "Temperature Monitor",
-        href: "project/temperature_probe",
+        href: "/project/temperature_probe",
       },
       {
         label: "Safety Laser",
-        href: "project/safety_laser",
+        href: "/project/safety_laser",
       },
     ],
   },
