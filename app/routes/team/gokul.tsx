@@ -1,6 +1,5 @@
 import { NavBar } from "~/components/header";
 import gokulPage from "../../../public/profiles/gokulPage.jpg";
-import { CommentBox } from "~/components/comments";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
