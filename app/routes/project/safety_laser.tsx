@@ -1,9 +1,7 @@
 import { NavBar } from "~/components/header";
 import laserIcon from "../../../public/projects/laser_lab/laser-symbol.svg";
 import esp32img from "../../../public/projects/laser_lab/esp32_demo.png";
-import { useLoaderData, useLocation } from "@remix-run/react";
-import { json } from "@remix-run/node";
-import { DiscussionEmbed } from "disqus-react";
+import { Helmet } from "react-helmet";
 
 const topics = [
   "esp32",
@@ -122,23 +120,23 @@ function Technologies() {
 }
 
 export default function SafetyLaserProjectPage() {
-  const location = useLocation();
-
   return (
     <main className="relative h-screen">
       <NavBar />
       <Cover />
       <Purpose />
       <Technologies />
-      {/* <DiscussionEmbed
-        shortname="example"
-        config={{
-          url: location.pathname,
-          identifier: "safety-laser-project",
-          title: "Safety Laser",
-          language: "en-US", //e.g. for Traditional Chinese (Taiwan)
-        }}
-      /> */}
+      <div
+        id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="8d74cde2-7749-4457-8548-79700a7c64d9"
+        data-page-id="project-safety-laser"
+        data-page-url="https://senior-design-portfolio.herokuapp.com/project/safety_laser"
+        data-page-title="Project Safety Laser"
+      ></div>
+      <Helmet>
+        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+      </Helmet>
     </main>
   );
 }
