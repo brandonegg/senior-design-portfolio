@@ -59,18 +59,18 @@ function GokulBlog() {
 export default function Gokul() {
   return (
     <main
-      className="grid place-items-center min-h-screen"
+      className="grid content-between justify-items-center min-h-screen"
       style={{
         backgroundColor: "#FFCBA4",
       }}
     >
       <NavBar />
-      <div className="space-y-12 mt-20 max-w-6xl">
+      <div className="space-y-12 mt-20 sm:mt-28 max-w-6xl">
         <GokulBlog />
-        <div className="p-4 max-w-4xl space-y-8 mx-auto mt-4 bg-white border-black border-t border-x rounded-t-xl shadow-xl">
-          <h1 className="text-4xl font-bold">Discussion</h1>
-          <CusDiscussion id="gokul-pake" title="Gokul's Biography" />
-        </div>
+      </div>
+      <div className="w-full sm:w-[600px] lg:w-[800px] p-4 max-w-6xl space-y-8 mx-auto mt-12 bg-white border-black border-t border-x rounded-t-xl shadow-xl">
+        <h1 className="text-4xl font-bold">Discussion</h1>
+        <CusDiscussion id="gokul-page" title="Gokul's Biography" />
       </div>
     </main>
   );
