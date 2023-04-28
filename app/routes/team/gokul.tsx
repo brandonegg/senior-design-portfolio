@@ -1,7 +1,6 @@
 import { NavBar } from "~/components/header";
 import gokulPage from "../../../public/profiles/gokulPage.jpg";
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
 import { CusDiscussion } from "~/components/comments";
 
 export function loader() {

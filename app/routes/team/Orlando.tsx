@@ -1,71 +1,61 @@
 import { NavBar } from "~/components/header";
 import orlandoPage from "../../../public/profiles/orlandoPage.jpg";
+import { CusDiscussion } from "~/components/comments";
+
+function OrlandoBlog() {
+  return (
+    <div className="m-4 flex flex-col md:flex-row space-y-4 md:space-x-12">
+      <div className="mx-auto shrink-0 rounded-full w-64 h-64 overflow-hidden">
+        <img
+          className="object-cover h-full"
+          src={orlandoPage}
+          alt="Gokul playing chess"
+        />
+      </div>
+      <div className="shrink flex flex-col space-y-6 h-fit my-auto">
+        <section className="space-y-2">
+          <h1 className="text-6xl font-bold">Orlando Reyes</h1>
+          <h2 className="font-bold text-xl">
+            I'm currently a senior studying Electrical Engineering at the
+            University of Iowa.
+          </h2>
+        </section>
+        <section>
+          <h3 className="font-bold text text-amber-900 text-xl">
+            Apart from my studies, here are some things that I enjoy doing in my
+            free time:
+          </h3>
+          <ul>
+            <li>
+              <b>Cooking:</b> I've been cooking from-scratch meals for my
+              friends and family for about 10 years.
+            </li>
+            <li>
+              <b>Exercise:</b> I have played baseball and various raquet sports
+              all my life and have been going to the gym regularly.
+            </li>
+            <li>
+              <b>Movies:</b> My roomate and I watch through entire movie
+              franchises (it's funnier when they're bad), currently we're
+              watching the entire extended Lord of the Rings series. Feel free
+              to comment movie series recommendations!
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  );
+}
 
 export default function Orlando() {
   return (
-    <main
-      style={{
-        backgroundColor: "#008000",
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
+    <main className="grid place-items-center min-h-screen bg-green-200">
       <NavBar />
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <img
-          src={orlandoPage}
-          alt="My Image"
-          style={{
-            marginRight: "1rem",
-            height: "300px",
-            width: "300px",
-            objectFit: "cover",
-            borderRadius: "50%",
-          }}
-        />
-        <div style={{ marginLeft: "3rem", marginBottom: "3rem" }}>
-          <h1 style={{ fontSize: "3rem", fontWeight: "bold" }}>
-            Orlando Reyes
-          </h1>
-          <p>
-            <span style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-              I'm currently a senior studying Electrical Engineering at the
-              University of Iowa.
-            </span>
-            <br />
-            <br />
-            <span
-              style={{
-                fontSize: "1.2rem",
-                color: "#693A00",
-                fontWeight: "bold",
-              }}
-            >
-              Apart from my studies, here are some things that I enjoy doing in
-              my free time:
-            </span>
-            <ul>
-              <li>
-                <span style={{ fontWeight: "bold" }}>Cooking:</span> I've been
-                cooking from-scratch meals for my friends and family for about
-                10 years.
-              </li>
-              <li>
-                <span style={{ fontWeight: "bold" }}>Exercise:</span> I have
-                played baseball and various raquet sports all my life and have
-                been going to the gym regularly.
-              </li>
-              <li>
-                <span style={{ fontWeight: "bold" }}>Movies:</span> My roomate
-                and I watch through entire movie franchises (it's funnier when
-                they're bad), currently we're watching the entire extended Lord
-                of the Rings series. Feel free to comment movie series
-                recommendations!
-              </li>
-            </ul>
-          </p>
+      <div className="space-y-12 mt-20 max-w-6xl">
+        <OrlandoBlog />
+        <div className="p-4 max-w-4xl space-y-8 mx-auto mt-4 bg-white border-black border-t border-x rounded-t-xl shadow-xl">
+          <h1 className="text-4xl font-bold">Discussion</h1>
+          <CusDiscussion id="gokul-pake" title="Gokul's Biography" />
         </div>
       </div>
     </main>
