@@ -3,6 +3,7 @@ import laserIcon from "../../../public/projects/laser_lab/laser-symbol.svg";
 import esp32img from "../../../public/projects/laser_lab/esp32_demo.png";
 import { useLocation } from "@remix-run/react";
 import { DiscussionEmbed } from "disqus-react";
+import { ClientOnly } from "remix-utils";
 
 const topics = [
   "esp32",
@@ -129,15 +130,21 @@ export default function SafetyLaserProjectPage() {
       <Cover />
       <Purpose />
       <Technologies />
-      <DiscussionEmbed
-        shortname="example"
-        config={{
-          url: location.pathname,
-          identifier: "safety-laser-project",
-          title: "Safety Laser",
-          language: "en-US", //e.g. for Traditional Chinese (Taiwan)
+      <ClientOnly>
+        {() => {
+          return (
+            <DiscussionEmbed
+              shortname="example"
+              config={{
+                url: location.pathname,
+                identifier: "safety-laser-project",
+                title: "Safety Laser",
+                language: "en-US", //e.g. for Traditional Chinese (Taiwan)
+              }}
+            />
+          );
         }}
-      />
+      </ClientOnly>
     </main>
   );
 }
