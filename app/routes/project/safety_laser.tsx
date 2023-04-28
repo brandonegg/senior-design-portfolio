@@ -17,21 +17,21 @@ const topics = [
 
 function Cover() {
   return (
-    <section className="h-full flex flex-col">
+    <section className="h-screen relative flex flex-col">
       <div
         style={{
           backgroundImage: `url("/backdrops/electronics-lab.jpg")`,
           backgroundPosition: `center`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          opacity: 0.7,
+          opacity: 0.5,
         }}
         className="absolute top-0 left-0 right-0 bottom-0"
       ></div>
       <div
         style={{
-          WebkitBackdropFilter: `blur(10px)`,
-          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: `blur(15px)`,
+          backdropFilter: "blur(15px)",
         }}
         className="h-full w-full grid place-items-center"
       >
@@ -122,15 +122,17 @@ function Technologies() {
 
 export default function SafetyLaserProjectPage() {
   return (
-    <main className="relative h-screen">
-      <NavBar />
-      <Cover />
-      <Purpose />
-      <Technologies />
-      <div className="p-4 max-w-4xl space-y-8 mx-auto mt-4">
+    <body>
+      <main className="drop-shadow-lg">
+        <NavBar />
+        <Cover />
+        <Purpose />
+        <Technologies />
+      </main>
+      <div className="block p-4 max-w-4xl space-y-8 mx-auto mt-4">
         <h1 className="text-4xl font-bold">Discussion</h1>
         <CusDiscussion id="project-safety-laser" title="Project Safety Laser" />
       </div>
-    </main>
+    </body>
   );
 }

@@ -70,10 +70,7 @@ export default function Gokul() {
         <GokulBlog />
         <div className="p-4 max-w-4xl space-y-8 mx-auto mt-4 bg-white border-black border-t border-x rounded-t-xl shadow-xl">
           <h1 className="text-4xl font-bold">Discussion</h1>
-          <CusDiscussion
-            id="project-temperature-probe"
-            title="Project Temperature Probe"
-          />
+          <CusDiscussion id="gokul-pake" title="Gokul's Biography" />
         </div>
       </div>
     </main>
