@@ -62,11 +62,13 @@ const navLinks: NavLinkDetails[] = [
  */
 function NavLink({ details }: { details: NavLinkDetails }) {
   return (
-    <a
-      href={details.href}
-      className="group relative text-white py-2 px-4 text-xl font-semibold"
-    >
-      {details.label}
+    <div className="group relative">
+      <a
+        href={details.href}
+        className="block text-white py-2 px-4 text-xl font-semibold"
+      >
+        {details.label}
+      </a>
       {details.dropdowns ? (
         <div className="hidden group-hover:block justify-center absolute end-full left-1/2 right-1/2 -translate-x-2/4 text-center w-fit">
           <div
@@ -99,7 +101,7 @@ function NavLink({ details }: { details: NavLinkDetails }) {
           </div>
         </div>
       ) : undefined}
-    </a>
+    </div>
   );
 }
 
